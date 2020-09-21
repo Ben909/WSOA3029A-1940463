@@ -1,0 +1,364 @@
+ @media only screen and (max-width: 1900px){
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #659B5E;
+
+}
+.titlemid{
+    text-align: center;
+    font-size: 30px;
+}
+.centre{
+    margin: auto;
+    padding: 2em;
+    background: #95BF74;
+    max-width: 950px;
+}
+.centre p{
+    font-size: 18px;
+    line-height: 19pt;
+    text-align: justify;
+}
+.wrap{
+    height: 110px;
+    width: 100%;
+    background: #608548;
+}
+.mylogo{
+    width: 170px;
+    height: 110px;
+    padding: 0px 0px;
+    
+}
+.navbar ul{
+    float: right;
+    margin-right: 20px;
+}
+.navbar ul li{
+    list-style: none;
+    margin: 0px 8px;
+    display: inline-block;
+    line-height: 80px;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color:black;
+    padding: 6px 13px;
+    font-size: 1.7rem;
+    transition: .35s;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: bolder;  
+}
+.navbar ul li a:hover{
+    background: #95BF74;
+    border-radius: 5px;
+}
+.reference a{
+    text-decoration: none;
+    color:black;
+    padding: 6px 13px;
+    font-size: 15px;
+    transition: .35s;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.blognav ul li{
+    list-style: none;
+}
+.blognav ul li a{
+    text-decoration: none;
+    color:black;
+    padding: 2px 4px;
+    font-size: 18px;
+    transition: .35s;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+.blognav ul li a:hover{
+    background: rgb(3, 192, 192);
+    border-radius: 5px;
+}
+button{
+    background: none;
+    color: rgb(3, 0, 44);
+    width: 140px;
+    height: 40px;
+    border: 3px solid #338033;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .5s;
+    overflow: hidden;
+}
+button :focus{
+    outline: none;
+}
+button:hover{
+    background: #338033;
+    cursor: pointer;
+}
+.styleguide{
+    margin: auto;
+    padding: 100px;
+}
+.styleguide img{
+    padding: 10px;
+    width: 350px;
+    height: 350px;
+}
+.chart-container{
+    width: 50vw;
+    height: 25vw;
+    margin: auto;
+}
+canvas{
+    border: 3px solid rgb(15, 151, 67);
+}
+
+} 
+
+
+@media only screen and (max-width: 1000px){
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #659B5E;
+    
+    }
+    .titlemid{
+        text-align: center;
+        font-size: 30px;
+    }
+    .centre{
+        margin: auto;
+        padding: 2em;
+        background: #95BF74;
+        max-width: 950px;
+    }
+    .centre p{
+        font-size: 18px;
+        line-height: 19pt;
+        text-align: justify;
+    }
+    .wrap{
+        height: 110px;
+        width: 100%;
+        background: #608548;
+        text-align: center;
+    }
+    .mylogo{
+        width: 100px;
+        height: 90px;
+        padding: 10px 0px;
+        
+    }
+    .navbar ul{
+        display: inline-block;
+    
+    }
+    .navbar ul li{
+        list-style: none;
+        margin: 0px 8px;
+        display: inline-block;
+        line-height: 80px;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color:black;
+        padding: 4px 8px;
+        font-size: 1.3rem;
+        transition: .35s;
+        font-family: Arial, Helvetica, sans-serif; 
+        font-weight: bolder;  
+    }
+    .navbar ul li a:hover{
+        background: #95BF74;
+        border-radius: 5px;
+    }
+    .reference a{
+        text-decoration: none;
+        color:black;
+        padding: 6px 13px;
+        font-size: 15px;
+        transition: .35s;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .blognav ul li{
+        list-style: none;
+    }
+    .blognav ul li a{
+        text-decoration: none;
+        color:black;
+        padding: 2px 4px;
+        font-size: 18px;
+        transition: .35s;
+        font-family: Arial, Helvetica, sans-serif;    
+    }
+    .blognav ul li a:hover{
+        background: rgb(3, 192, 192);
+        border-radius: 5px;
+    }
+    button{
+        background: none;
+        color: rgb(3, 0, 44);
+        width: 140px;
+        height: 40px;
+        border: 3px solid #338033;
+        font-size: 18px;
+        border-radius: 4px;
+        transition: .5s;
+        overflow: hidden;
+    }
+    button :focus{
+        outline: none;
+    }
+    button:hover{
+        background: #338033;
+        cursor: pointer;
+    }
+    .styleguide{
+        margin: auto;
+        padding: 100px;
+    }
+    .styleguide img{
+        padding: 10px;
+        width: 350px;
+        height: 350px;
+    }
+    .chart-container{
+        width: 50vw;
+        height: 25vw;
+        margin: auto;
+    }
+    canvas{
+        border: 3px solid rgb(15, 151, 67);
+    }
+
+    } 
+    
+    
+
+@media only screen and (max-width: 800px){
+
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+        background: #659B5E;
+    
+    }
+    .titlemid{
+        text-align: center;
+        font-size: 30px;
+    }
+    .centre{
+        margin: auto;
+        padding: 2em;
+        background: #95BF74;
+        max-width: 950px;
+    }
+    .centre p{
+        font-size: 18px;
+        line-height: 19pt;
+        text-align: justify;
+    }
+    .wrap{
+        height: 110px;
+        width: 100%;
+        background: #608548;
+        text-align: center;
+    }
+    .mylogo{
+        width: 100px;
+        height: 90px;
+        padding: 10px 0px;
+        
+    }
+    .navbar ul{
+        display: inline-block;
+    
+    }
+    .navbar ul li{
+        list-style: none;
+        margin: 0px 8px;
+        display: inline-block;
+        line-height: 80px;
+    }
+    .navbar ul li a{
+        text-decoration: none;
+        color:black;
+        padding: 4px 8px;
+        font-size: 1.3rem;
+        transition: .35s;
+        font-family: Arial, Helvetica, sans-serif; 
+        font-weight: bolder;  
+    }
+    .navbar ul li a:hover{
+        background: #95BF74;
+        border-radius: 5px;
+    }
+    .reference a{
+        text-decoration: none;
+        color:black;
+        padding: 6px 13px;
+        font-size: 15px;
+        transition: .35s;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .blognav ul li{
+        list-style: none;
+    }
+    .blognav ul li a{
+        text-decoration: none;
+        color:black;
+        padding: 2px 4px;
+        font-size: 18px;
+        transition: .35s;
+        font-family: Arial, Helvetica, sans-serif;    
+    }
+    .blognav ul li a:hover{
+        background: rgb(3, 192, 192);
+        border-radius: 5px;
+    }
+    button{
+        background: none;
+        color: rgb(3, 0, 44);
+        width: 140px;
+        height: 40px;
+        border: 3px solid #338033;
+        font-size: 18px;
+        border-radius: 4px;
+        transition: .5s;
+        overflow: hidden;
+    }
+    button :focus{
+        outline: none;
+    }
+    button:hover{
+        background: #338033;
+        cursor: pointer;
+    }
+    .styleguide{
+        margin: auto;
+        padding: 100px;
+    }
+    .styleguide img{
+        padding: 10px;
+        width: 350px;
+        height: 350px;
+    }
+    .chart-container{
+        width: 50vw;
+        height: 25vw;
+        margin: auto;
+    }
+    canvas{
+        border: 3px solid rgb(15, 151, 67);
+    }
+
+    } 
+    
+
+    

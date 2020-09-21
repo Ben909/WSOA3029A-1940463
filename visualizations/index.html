@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Visualizations Page">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <script src="../Js/menu.js"></script>
+    <title>Visualizations</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <!--<link rel="stylesheet" href="../CSS/styleblog.css"> -->
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
+    <script src="../Js/graph.js" defer></script>
+
+</head>
+<body onload="generateNav()">
+    
+<header class="wrap" id="nav-wrap">
+        <!-- <nav class="navbar">
+            <img class="mylogo" src="../images/logovisual-min.png">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../blog/index.html">Theory Blogs</a></li>
+                <li><a href="index.html">Visualizations</a></li>
+                <li><a href="../wireframes/index.html">Wireframes</a></li>
+            </ul>
+        </nav> -->
+  
+</header>
+
+<main>
+    <article class="centre">
+
+        <h1 class="titlemid">About the Chart</h1>
+
+        <p>
+            As per the assignment brief, we are required to produce some form of data visualization using an existing API.
+            The graph below is facilitated by the open source library, <a href="https://www.chartjs.org/" target="_blank">Chart.js</a> to illustrate the statistical distribution of recovered
+            Covid-19 patients across all eleven provinces of South-Africa. The concept for the chart is inspired by the times we life in.
+            Amidst the pandemic, the current change in climate proves that more patients have recovered due to a lower chance for the
+            virus to spread in warm weather temperatures. I therefore decided to create a chart which indicates which provinces had the 
+            highest recovery rate. My idea was that this information could be used inform communities of strategies to combat the virus or 
+            mitigate risk factors. Currently, the chart is not yet equipped with a ‘poll’ function to indicate individual recoveries from 
+            various provinces in the country. For the purpose of this visualization, there are no databases where I can store this 
+            information or keep it updated. Further development of this chart must be conducted within these considerations.  
+        </p>
+
+            <div class="chart-container">
+                <!--<canvas id="chart" width="400" height="400"></canvas> -->
+                <canvas id="chart"></canvas>
+            </div>  
+        
+            
+    </article> 
+
+</main>
+
+</body>
+</html>
