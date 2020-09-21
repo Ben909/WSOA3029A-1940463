@@ -73,24 +73,4 @@ const pollChart = new Chart(ctx, {
             borderWidth: 6
         }]
     },
-    options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        },
-    title: {
-        display:true,
-        text:'Poll Results',
-        fontColor: "#333",
-        fontSize: 20,
-        padding: 20
-    },
-        legend: {
-            display: false
-        }
-    }
-
 });
