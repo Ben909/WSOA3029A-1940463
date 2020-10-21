@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../CSS/style.css">
     <script src="../Js/menu.js"></script>
     <title>Visualizations</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" defer></script>
-    <script src="../Js/graph.js" defer></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script type="text/javascript" src="../Js/graph.js" defer></script>
 
 </head>
 <body onload="generateNav()">
+
+
     
 <header class="wrap" id="nav-wrap">
         <!-- <nav class="navbar">
@@ -33,8 +35,8 @@
 
         <p>
             As per the assignment brief, we are required to produce some form of data visualization using an existing API.
-            The graph below is facilitated by the open source library, <a href="https://www.chartjs.org/" target="_blank">Chart.js</a> to illustrate the statistical distribution of recovered
-            Covid-19 patients across all eleven provinces of South-Africa. The concept for the chart is inspired by the times we life in.
+            The graph below is facilitated by the open source library, <a href="https://d3js.org/" target="_blank">D3.js</a> to illustrate the statistical distribution of recovered
+            Covid-19 patients across all nine provinces of South-Africa. The concept for the chart is inspired by the times we life in.
             Amidst the pandemic, the current change in climate proves that more patients have recovered due to a lower chance for the
             virus to spread in warm weather temperatures. I therefore decided to create a chart which indicates which provinces had the 
             highest recovery rate. My idea was that this information could be used inform communities of strategies to combat the virus or 
@@ -43,10 +45,10 @@
             information or keep it updated. Further development of this chart must be conducted within these considerations.  
         </p>
 
-            <div class="chart-container">
-                <!--<canvas id="chart" width="400" height="400"></canvas> -->
-                <canvas id="chart"></canvas>
-            </div>  
+        <div class="graphmid">
+            <h2>Covid-19 Recoveries</h2>
+            <div id="bar-3Dcontainer"></div>
+          </div>
         
             
     </article> 
