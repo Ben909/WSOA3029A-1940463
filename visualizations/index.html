@@ -8,7 +8,9 @@
     <script src="../Js/menu.js"></script>
     <title>Visualizations</title>
     <script src="https://d3js.org/d3.v6.min.js"></script>
-    <script type="text/javascript" src="../Js/graph.js" defer></script>
+    <script src="../Js/graph.js" defer></script>
+    <script src="../Js/examgraph.js" defer></script>
+    
     
 
 
@@ -16,7 +18,7 @@
 </head>
 <body onload="generateNav()">   
 
-
+    
 <header class="wrap" id="nav-wrap">
         <!-- <nav class="navbar">
             <img class="mylogo" src="../images/logovisual-min.png">
@@ -33,30 +35,63 @@
 <main>
     <article class="centre">
 
-        <h1 class="titlemid">About the Chart</h1>
-
-        <p>
-            As per the assignment brief, we are required to produce some form of data visualization using an existing API.
-            The graph below is facilitated by the open source library, <a href="https://d3js.org/" target="_blank">D3.js</a> to illustrate the statistical distribution of recovered
-            Covid-19 patients across all nine provinces of South-Africa. The concept for the chart is inspired by the times we life in.
-            Amidst the pandemic, the current change in climate proves that more patients have recovered due to a lower chance for the
-            virus to spread in warm weather temperatures. I therefore decided to create a chart which indicates which provinces had the 
-            highest number of total recoveries. My idea was that this information could be used inform communities of strategies to combat the virus or 
-            mitigate risk factors. Currently, the chart is not yet equipped with a ‘poll’ function to indicate individual recoveries from 
-            various provinces in the country. For the purpose of this visualization, there are no databases where I can store this 
-            information or keep it updated. Further development of this chart must be conducted within these considerations.  
-        </p>
+        <h1 class="titlemid">About the Charts</h1>
 
         <div class="graphmid">
-            <h2>Covid-19 Recoveries</h2>
+            <h2>Provincial Covid-19 Recoveries</h2>
             <div id="bar-3Dcontainer"></div>
+            <p> As per the assignment brief, we are required to produce some form of data visualization using an existing API.
+                The graphs below is facilitated by the open source library, <a href="https://d3js.org/" target="_blank">D3.js</a> to illustrate the statistical distribution of recovered
+                Covid-19 patients across all nine provinces of South-Africa. The concept for the chart is inspired by the times we life in.
+                Amidst the pandemic, the current change in climate proves that more patients have recovered due to a lower chance for the
+                virus to spread in warm weather temperatures. I therefore decided to create a chart which indicates which provinces had the 
+                highest number of total recoveries. My idea was that this information could be used inform communities of strategies to combat the virus or 
+                mitigate risk factors.For the purpose of this visualization, there are no databases where I can store this 
+                information or keep it updated. Further development of this chart must be conducted within these considerations.  </p>
+
+            <h2>Circle Diagram</h2>    
             <div id="Pie-3Dcontainer"></div>
+            <p>For my circle diagram, I incorporated the same dataset as in the previous bar chart to create a new visualization. My goal with the development
+               of this chart is to express how alternative methods can be used to visualize datasets. This gives an alternative perspective to the end-user about
+               the information they are presented.Although not fully operational, my experimentation with new visualizations revealed the importance of data
+               science. If we are to break down most visualizations, we find that most are made up of shapes, colors and sizable dimensions. It is 
+               important to note how influential these elements are to make informative decisions and how this impacts the visualization of information. 
+               Coherence with regard to the building blocks of visualizations gives it the ability to convey a story more efficiently.    
+            </p>
+            <h2>Stacked disease Chart</h2>
+            <div id="Stack-3Dcontainer"></div>
+            <p>Stacked charts are useful for displaying information that can be compared as a whole. These graphs use multiple groups of data to 
+               identify the patterns between them. The representation of these categories also helps to situate each group and its relevance within 
+               the overarching narrative of the graph. The bottom range of this chart represents age groups and the number of underlying medical 
+               conditions are displayed on the Y-Axis. The goal of this graph is meant to represent the number people who had previous conditions 
+               before contracting the Covid-19 virus. It gives more awareness to the importance of social distancing through the fact that mortality 
+               rates of some groups are significantly higher based on their medical background.</p>
+
+            <h2>Alternative Bar Chart comparison</h2>
+            <div id="barchart"></div>
+            <p>From personal experience with visualizations, bar charts are easy to interpret since the relationship between bar sizes and their
+               corresponding values enable users to easily identify and mark comparisons. For this reason, I created a simple bar chart showcasing 
+               the number of Covid-19 tests performed by the top ten most infected counties. The statistical values and the relationship between 
+               these countries help to establish stories about how we combat the virus. With their population taken into account, it is natural that 
+               countries with higher inflections will perform more tests. Herein lies some of the disadvantages of bar charts. They tend to look at 
+               particular data sets, which makes it hard to represent wide ranges of numbers to efficiently communicate their message. 
+               The population of India (1,385,419,430) is more than four times the population of the USA (331,780,397). Yet the number of tests 
+               performed in India is drastically lower in comparison to other populations. It sets a narrative to other information presented about Covid-19.   </p>
+            
           </div>
-        
+
+    
+          
+            
             
     </article> 
 
 </main>
+
+
+
+
+
 
 </body>
 </html>

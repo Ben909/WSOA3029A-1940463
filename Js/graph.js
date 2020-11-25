@@ -1,3 +1,5 @@
+// Bar Chart
+
 {const Mydata = [
     { region: 'Eastern Cape', number: 86400 },
     { region: 'Free State', number: 35537 },
@@ -9,12 +11,13 @@
     { region: 'Western Cape', number: 105347 },
     { region: 'Northern Cape', number: 16356 },
   ];
-  
+
 
   const margin = { top: 50, bottom: 50, left: 50, right: 50 };
   const height = 500;
   const width = 1000;
 
+  
   const svg = d3.select('#bar-3Dcontainer')
     .append('svg')
     .attr('width', width - margin.left - margin.right)
@@ -42,6 +45,7 @@
       .attr("class", "rect")
       .attr("height", d => y(0) - y(d.number))
       .attr("width", x.bandwidth());
+    
   
   function yAxis(g) {
     g.attr("transform", `translate(${margin.left}, 0)`)
@@ -57,11 +61,11 @@
   
   svg.append("g").call(xAxis);
   svg.append("g").call(yAxis);
-  svg.node();}
+  svg.node();
+}
 
+// Donut Chart
 
-
-  
 {const width = 500; 
  const height = 500;
  const colors = d3.scaleOrdinal(d3.schemeDark2);
@@ -92,6 +96,75 @@
     const sections = svg.append("g").attr("transform", "translate(250, 250)")
                           .selectAll("path").data(data);
     sections.enter().append("path").attr("d", segments).attr("fill",
-    function(d){return colors(d.data.number);});
-    
+    function(d){return colors(d.data.number);});   
 }
+
+// Stacked Graph
+
+{const data = [{aged:20, asthma: 33, immunocompromised: 114,
+  diabetes: 45, liverdisease:90},
+
+  {aged:30, asthma: 37, immunocompromised: 150,
+  diabetes: 33, liverdisease:111},
+
+  {aged:40, asthma: 47, immunocompromised: 186,
+  diabetes: 49, liverdisease:134},
+
+  {aged:50, asthma: 76, immunocompromised: 260,
+   diabetes: 65, liverdisease:129},
+
+  {aged:60, asthma: 111, immunocompromised: 300,
+  diabetes: 74, liverdisease:155},
+  
+  {aged:70, asthma: 93, immunocompromised: 360,
+  diabetes: 82, liverdisease:180}];
+
+
+const width = 600, height = 500, spacing = 60;
+
+const xScale = d3.scaleLinear()
+      .domain([d3.min(data, function(d){return d.aged;}), d3.max(data, function(d)
+      {return d.aged;})])
+      .range([0, width-spacing]);
+const yScale = d3.scaleLinear()
+      .range([height-spacing, 0]);
+
+const svg = d3.select("#Stack-3Dcontainer").append("svg")
+  .attr("width", width).attr("height", height)
+  .append("g").attr("transform", "translate(" +
+  spacing/2 + "," + spacing/2 + ")");
+svg.append("g")
+.attr("transform", "translate(0," + (height-spacing)
++ ")")
+.call(d3.axisBottom(xScale).ticks(6).tickFormat(d3.format("d")))
+.attr("font-size", '13px');
+
+
+const stack = d3.stack().keys(["asthma", "immunocompromised", "diabetes", "liverdisease"]);
+const colors = ["LightSeaGreen", "FireBrick", "green", "orange"];
+const dataSet = stack(data);
+console.log(dataSet);              
+
+
+yScale.domain([0, d3.max(dataSet[dataSet.length-
+1], function(d){return d[1]})]);
+svg.append("g")
+.call(d3.axisLeft(yScale)) 
+.attr("font-size", '13px');
+
+const area = d3.area()
+      .x(function(d){return xScale(d.data.aged);})
+      .y0(function(d){return yScale(d[0]);})
+      .y1(function(d){return yScale(d[1]);});
+
+const series = svg.selectAll("g.series")
+          .data(dataSet)
+          .enter().append("g")
+          .attr("class", "series");
+
+series.append("path")
+.style("fill", function(d, i){return colors[i];})
+.attr("d", function(d){return area(d);});
+}
+
+

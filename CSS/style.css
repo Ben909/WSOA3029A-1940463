@@ -132,7 +132,54 @@ canvas{
     border: 3px solid rgb(15, 151, 67);
 }
 
-} 
+}
+
+/*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
+
+/* todo: add styles */
+.vertical-grid{
+    stroke:#ccc;
+    
+  }
+  
+  .ordinate-text{
+    font-size:10px;
+    transform:translateY(10px);
+  }
+  
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: auto;
+    height: auto;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity:0;
+    padding:5px;
+  }
+  
+  .right-align{
+    position:absolute;
+    right:100px;
+    
+  }
+  .box,
+  .label{
+      display:inline-block;
+  }
+  
+  .box{
+    width:10px;
+    height:10px;
+    margin:0px 10px;
+  }
+
+/*HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH*/
+
 
 
 @media only screen and (max-width: 1000px){
